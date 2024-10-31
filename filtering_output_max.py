@@ -24,7 +24,6 @@ def filtering_max_LIS_LIA(df: pd.DataFrame, LIS: int, LIA: int) -> pd.DataFrame:
     max_df_filter_LIS_LIA = df.loc[(df["LIS"] >= LIS) & (df["LIA"] >= LIA)]
     return max_df_filter_LIS_LIA
 
-filtering_max_LIS_LIA(df_max, 0.203, 3432).to_csv(f"{file_name_max}_filtered_LIS_LIA_max.csv", index=False)  
 
 
 def filtering_max_ipTM(df: pd.DataFrame, ipTM:int) -> pd.DataFrame:
@@ -41,5 +40,3 @@ def filtering_max_ipTM(df: pd.DataFrame, ipTM:int) -> pd.DataFrame:
     """
     max_df_filter_iptm = df[df["ipTM"] >= ipTM]
     return max_df_filter_iptm
-
-filtering_max_ipTM(df_max, 0.7).to_csv(f"{file_name_max}_filtered_ipTM_max.csv", index=False)

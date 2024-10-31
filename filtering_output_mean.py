@@ -26,7 +26,6 @@ def filtering_mean_LIS_LIA(df: pd.DataFrame, LIS: int, LIA: int):
     mean_df_filter_LIS_LIA.to_csv(f"{file_name_mean}_filtered_LIS_LIA_mean.csv", index=False)
     return mean_df_filter_LIS_LIA
 
-filtering_mean_LIS_LIA(df_mean, 0.073 , 1610).to_csv(f"{file_name_mean}_filtered_LIS_LIA_mean.csv", index=False)  
 
 
 def filtering_mean_ipTM(df: pd.DataFrame, ipTM:int):
@@ -42,5 +41,3 @@ def filtering_mean_ipTM(df: pd.DataFrame, ipTM:int):
     """
     mean_df_filter_iptm = df[df["ipTM"] >= ipTM]
     return mean_df_filter_iptm
-
-filtering_mean_ipTM(df_mean, 0.6).to_csv(f"{file_name_mean}_filtered_ipTM_mean.csv", index=False)
