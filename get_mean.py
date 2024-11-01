@@ -20,7 +20,7 @@ def get_mean(data: pd.DataFrame) -> pd.DataFrame:
     
 
     #Create a list of the metrics that will be used for averages
-    metric_columns = ["LIS", "LIA", "ipTM", "pTM", "AFM Confidence", "pLDDT", "MSA_depth_peptidase", "MSA_depth_inhibitors"]
+    metric_columns = ["LIS", "LIA", "ipTM", "pTM", "AFM Confidence", "pLDDT", "Distances", "SASA", "Change in SASA", "MSA_depth_inhibitors", "MSA_depth_peptidase", "Peptidase active site"]
 
     #Group the pipeline data by "Protein 1" and "Protein 2" and then take the means of the groups based on the specified columns in the "metric_columns" list
     df_complex_mean = data.groupby(["Protein 1", "Protein 2"])[metric_columns].mean().reset_index()
