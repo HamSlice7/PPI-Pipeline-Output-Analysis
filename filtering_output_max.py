@@ -21,7 +21,7 @@ def filtering_max_LIS_LIA(df: pd.DataFrame, LIS: int, LIA: int) -> pd.DataFrame:
     Return: 
         - The filtered data frame containing rows that pass the LIA + LIS thresholds
     """
-    max_df_filter_LIS_LIA = df.loc[(df["LIS"] >= LIS) & (df["LIA"] >= LIA)]
+    max_df_filter_LIS_LIA = df.loc[(df["Max LIS"] >= LIS) & (df["Max LIA"] >= LIA)]
     return max_df_filter_LIS_LIA
 
 
@@ -38,5 +38,5 @@ def filtering_max_ipTM(df: pd.DataFrame, ipTM:int) -> pd.DataFrame:
         - The filtered data frame containing rows that pass the ipTM threshold
 
     """
-    max_df_filter_iptm = df[df["ipTM"] >= ipTM]
+    max_df_filter_iptm = df[df["Max ipTM"] >= ipTM]
     return max_df_filter_iptm
