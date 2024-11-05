@@ -31,7 +31,6 @@ def get_max_min(data: pd.DataFrame) -> pd.DataFrame:
 
     combined_df.rename(columns={"ipTM":"Max ipTM", "LIS":"Max LIS", "LIA":"Max LIA", "Distances": "Min Distance", "SASA": "Min SASA", "Change in SASA": "Max Change in SASA Ratio"}, inplace=True)
 
-    print(combined_df.head())
 
     return combined_df
 
