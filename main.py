@@ -21,7 +21,7 @@ max_df.to_csv(f"{file_name}_max_min.csv", index=False)
 mean_df.to_csv(f"{file_name}_mean.csv", index = False)
 
 #Filtering the max data frame based on a LIS + LIA threshold and creating a new data frame.
-max_df_LIS_LIA_threhsold = filtering_output_max.filtering_max_LIS_LIA(max_df, 0.203, 3432)
+max_df_LIS_LIA_threhsold = filtering_output_max.filtering_max_LIS_LIA(max_df, 0.200, 3400)
 #Filtering the max data frame based on a ipTM threshold and creating a new data frame.
 max_df_iptm_threshold = filtering_output_max.filtering_max_ipTM(max_df, 0.7)
 
@@ -30,7 +30,7 @@ max_df_LIS_LIA_threhsold.to_csv(f"{file_name}_filtered_LIS_LIA_max_min.csv", ind
 max_df_iptm_threshold.to_csv(f"{file_name}_filtered_ipTM_max_min.csv", index = False)
 
 #Filtering the mean data frame based on a LIS + LIA threshold and creating a new data frame.
-mean_df_LIS_LIA_threshold = filtering_output_mean.filtering_mean_LIS_LIA(mean_df, 0.073, 1610)
+mean_df_LIS_LIA_threshold = filtering_output_mean.filtering_mean_LIS_LIA(mean_df, 0.070, 1600)
 #Filtering the mean data frame based on a ipTM threshold and creating a new data frame.
 mean_df_iptm_threshold = filtering_output_mean.filtering_mean_ipTM(mean_df, 0.6)
 
