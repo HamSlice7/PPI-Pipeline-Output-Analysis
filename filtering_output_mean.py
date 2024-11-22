@@ -22,7 +22,7 @@ def filtering_mean_LIS_LIA(df: pd.DataFrame, LIS: int, LIA: int):
     Return: 
         - The filtered data frame containing rows that pass the LIA + LIS thresholds
     """
-    mean_df_filter_LIS_LIA = df.loc[(df["LIS"] >= LIS) & (df["LIA"] >= LIA)]
+    mean_df_filter_LIS_LIA = df.loc[(df["Mean LIS"] >= LIS) & (df["Mean LIA"] >= LIA)]
     mean_df_filter_LIS_LIA.to_csv(f"{file_name_mean}_filtered_LIS_LIA_mean.csv", index=False)
     return mean_df_filter_LIS_LIA
 
@@ -39,5 +39,5 @@ def filtering_mean_ipTM(df: pd.DataFrame, ipTM:int):
     Return: 
         - The filtered data frame containing rows that pass the ipTM threshold
     """
-    mean_df_filter_iptm = df[df["ipTM"] >= ipTM]
+    mean_df_filter_iptm = df[df["Mean ipTM"] >= ipTM]
     return mean_df_filter_iptm
